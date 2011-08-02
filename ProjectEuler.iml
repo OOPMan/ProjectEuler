@@ -5,7 +5,6 @@
       <configuration>
         <option name="compilerLibraryLevel" value="Global" />
         <option name="compilerLibraryName" value="scala-compiler-2.9.0.1" />
-        <option name="continuations" value="true" />
         <option name="deprecationWarnings" value="true" />
         <option name="explainTypeErrors" value="true" />
         <option name="optimiseBytecode" value="true" />

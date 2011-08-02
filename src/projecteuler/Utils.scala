@@ -34,7 +34,7 @@ object Utils {
     def printTimed(func: => Any) {
         val result = time(func)
         println("Result:" + result._1)
-        println("Time:" + result._2)
+        println("Time in seconds:" + result._2.toFloat / 1000.0)
     }
 }
 
