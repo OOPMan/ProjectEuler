@@ -13,9 +13,20 @@ package projecteuler
  */
 
 object Problem1 {
+
     // Solves the problem using a simple but stupid method
     def Stupid(min: Int, max: Int) = (for(num <- min to max if( (num % 3 == 0 ) || (num % 5 == 0) )) yield num).sum
 
-    //TODO: Solve the problem using a more clever method
+    // Solves the problem using a more intelligent method that takes advantage of Arithmetic Progressions
+    def Clever(min: Int, max: Int) =
+        SumSeries(min, max, 3) + SumSeries(min, max, 5) - SumSeries(min, max, 15)
+
+    def SumSeries(min: Int, max:Int, number: Int) =
+        SumArithmeticProgression(if(min <= number) number else number * (min.toFloat / number).ceil.toInt, (max/number)*number, max / number).toInt
+
+    def SumArithmeticProgression(first: Int, last: Int, length: Int) = ((first + last) / 2.0) * length
+
+
+
 
 }
