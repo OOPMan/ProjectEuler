@@ -1,7 +1,5 @@
 package projecteuler
 
-import scala.collection.mutable.LinkedList
-
 /**
  * Created by IntelliJ IDEA.
  * User: adamj
@@ -18,6 +16,11 @@ import scala.collection.mutable.LinkedList
  */
 
 object Problem2 {
+    /**
+     * Lazy Fibonacci generation using a stream. See [scala-user] Anyone have some good Scala Occult Code? from scala-user@googlegroups.com
+     */
+    lazy val FibonacciStream: Stream[Int] = 1 #:: 1 #:: FibonacciStream.zip(FibonacciStream.tail).map { case (a,b) => a+b }
+
     /**
      * This function generates a Fibonacci Sequence in an iterative fashion
      */
