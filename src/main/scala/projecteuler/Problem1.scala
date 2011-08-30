@@ -26,7 +26,4 @@ object Problem1 {
 
     def SumArithmeticProgression(first: Int, last: Int, length: Int) = ((first + last) / 2.0) * length
 
-
-
-
 }
